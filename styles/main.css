@@ -400,6 +400,10 @@ a {
    border: none;
 }
 
+.form-btn:hover {
+   background-color: rgba(251, 241, 56, 0.5);
+}
+
 .checkbox:checked,
 .checkbox:not(:checked){
    position: absolute;
@@ -519,6 +523,10 @@ a {
    text-transform: uppercase;
    text-align: center;  
    border: none;
+}
+
+.main-btn:hover {
+   background-color: rgba(251, 241, 56, 0.5);
 }
 
 .main-info {

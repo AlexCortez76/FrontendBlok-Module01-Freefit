@@ -1,4 +1,4 @@
-# Дипломный проект FrontendBlok Freefit
+# Дипломный проект FrontendBlok FreeFit
 Проект был выполнен в рамках базового курса по верстке от [Frontend Blok](https://frontendblok.com/).
 
 **Ссылки по проекту:**
