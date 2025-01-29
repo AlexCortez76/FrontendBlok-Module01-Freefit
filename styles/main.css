@@ -193,7 +193,8 @@ a {
 }
 
 .hero-btn:hover {
-   background-color: rgba(251, 241, 56, 0.5);
+   color: var(--yellow);
+   background-color: var(--dark);
 }
 
 .hero-bg {
@@ -401,7 +402,8 @@ a {
 }
 
 .form-btn:hover {
-   background-color: rgba(251, 241, 56, 0.5);
+   color: var(--yellow);
+   background-color: var(--dark);
 }
 
 .checkbox:checked,
@@ -526,7 +528,8 @@ a {
 }
 
 .main-btn:hover {
-   background-color: rgba(251, 241, 56, 0.5);
+   color: var(--yellow);
+   background-color: var(--dark);
 }
 
 .main-info {
