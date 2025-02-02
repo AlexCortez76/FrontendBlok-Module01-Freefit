@@ -9,6 +9,7 @@
 body {
    font-family: "Montserrat";
    color: var(--dark);
+   overflow-x: hidden;
 }
 
 a {
@@ -20,16 +21,16 @@ a {
    margin: 0 auto;
    padding-left: 15px;
    padding-right: 15px;
- }
+}
 
- /* Header */
+/* Header */
 
- .header {
+.header {
    padding-top: 50px;
    padding-bottom: 30px;
- }
+}
 
- .header-wrapper {
+.header-wrapper {
    display: flex;
    align-items: center;
 }
@@ -326,27 +327,34 @@ a {
    height: 348px;
    background-color: var(--light);
    margin-top: 162px;
-   z-index: -2;
+   z-index: -3;
 }
 
-.subscribe-title {
+.subscribe-head {
    font-weight: 700;
    font-size: clamp(26px, 2.5vw ,40px);
    text-align: center;
    padding-top: 40px;
    padding-left: 5px;
+   z-index: 2;
+}
+
+.subscribe-title {
+   display: inline-block;
    position: relative;
-   z-index: 1;
+   z-index: 0;
 }
 
 .subscribe-item {
+   display: inline-block;
    background-color: var(--yellow);
-   width: 53px;
+   width: 100%;
+   max-width: 53px;
    height: 53px;
    border-radius: 100%;
    position: absolute;
-   bottom: 15px;
-   left: 340px;
+   bottom: 32%;
+   left: -6%;
    z-index: -1;
 }
 
@@ -358,9 +366,11 @@ a {
 }
 
 .form-email {
+   background-color: white;
    font-size: 18px;
+   font-weight: 0;
    line-height: 150%;
-   opacity: 0.3;
+   opacity: 0.4;
    padding: 0 20px;
    width: 100%;
    max-width: 372px;
@@ -376,7 +386,7 @@ a {
    display: flex;
    font-size: 11px;
    line-height: 150%;
-   opacity: 0.5;
+   opacity: 0.7;
    padding: 0;
    margin-top: 15px;
 }
@@ -655,9 +665,6 @@ a {
       grid-template-rows: repeat(3, 240px);
       grid-template-areas: "a b" "c d" "e f";
    }
-   .subscribe-item {
-      left: 200px;
-   }
    .main-title {
       flex-basis: 40%;
    }
@@ -680,9 +687,6 @@ a {
    }
    .arrow {
       top: min(64vw, 960px);
-   }
-   .subscribe-item {
-      left: 160px;
    }
    .main-title {
       flex-basis: calc(100% - 400px - 8px);
@@ -776,10 +780,6 @@ a {
    .grid {
       grid-template-rows: repeat(3, 224px);
    }
-   .subscribe-item {
-      left: 110px;
-      bottom: 10px;
-   }
    .main-title {
       flex-basis: calc(100% - 382px - 5px);
    }
@@ -831,8 +831,8 @@ a {
    .subscribe-item {
       width: 35px;
       height: 35px;
-      left: 92px;
-      bottom: 13px;
+      left: -4%;
+      bottom: 40%;
    }
    .main-title h2 {
       margin-bottom: 0;
@@ -870,6 +870,14 @@ a {
    .item-title {
       font-size: 14px;
       line-height: 120%;
+   }
+   .subscribe-title {
+      flex-basis: 100%;
+      max-width: 442px;
+   }
+   .subscribe-item {
+      bottom: 70%;
+      left: 18%;
    }
    .main-title {
       flex-basis: 100%;
@@ -930,8 +938,8 @@ a {
    .subscribe-item {
       width: 31px;
       height: 31px;
-      bottom: 45px;
-      left: 40px;
+      bottom: 56px;
+      left: 20px;
    }
    .form {
       flex-direction: column;
