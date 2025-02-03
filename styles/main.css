@@ -6,10 +6,13 @@
     --tr: .2s;
 }
 
+html {
+   overflow-x: hidden;
+}
+
 body {
    font-family: "Montserrat";
    color: var(--dark);
-   overflow-x: hidden;
 }
 
 a {
@@ -707,6 +710,10 @@ a {
 }
 
 @media (max-width: 768px) {
+   .header {
+      padding-top: 35px;
+      padding-bottom: 0;
+   }
    .header-wrapper {
       justify-content: space-between;
    }
@@ -723,8 +730,9 @@ a {
    .line {
       border: 1px solid var(--dark);
       width: 100%;
-      max-width: 565px;
+      max-width: 600px;
       opacity: 0.2;
+      margin: 0 auto;
    }
    .fit-menu {
       display: block;
@@ -777,8 +785,17 @@ a {
    .arrow {
       top: min(68vw, 860px);
    }
+   .menu {
+      margin-top: 127px;
+   }
    .grid {
       grid-template-rows: repeat(3, 224px);
+   }
+   .subscribe {
+      margin-top: 97px;
+   }
+   .main {
+      margin-top: 60px;
    }
    .main-title {
       flex-basis: calc(100% - 382px - 5px);
@@ -786,7 +803,11 @@ a {
    .main-head img {
       max-width: 382px;
    }
+   .main-info {
+      margin-top: 85px;
+   }
    .footer {
+      margin-top: 76px;
       padding-top: 0;
    }
    .mobile {
@@ -848,6 +869,12 @@ a {
 }
 
 @media (max-width: 540px) {
+   .header {
+      padding-top: 32px;
+   }
+   .hero-wrapper {
+      margin-top: 63px;
+   }
    .hero-img {
       display: none;
    }
@@ -856,9 +883,23 @@ a {
       width: 100%;
       max-width: 540px;
    }
+   .menu {
+      margin-top: 76px;
+   }
+   .menu-title {
+      flex-basis: 60%;
+   }
+   .grid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 180px);
+      grid-template-areas: "a" "b" "c" "d" "e" "f";
+   }
+   .item {
+      padding: 0 12px;
+   }
    .item img {
-      max-width: 38px;
-      height: 39px;
+      max-width: 42px;
+      height: 43px;
       padding-bottom: 0;
    }
    .item p {
@@ -868,7 +909,7 @@ a {
       right: 10px;
    }
    .item-title {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 120%;
    }
    .subscribe-title {
@@ -879,19 +920,55 @@ a {
       bottom: 70%;
       left: 18%;
    }
+   .form {
+      flex-direction: column;
+      gap: 15px;
+   }
+   .form > div {
+      flex-basis: 100%;
+   }
+   .form-email {
+      max-width: 100%;
+   }
+
+   .agreement {
+      justify-content: center;
+      text-align: center;
+   }
+
+   .form-btn {
+      flex-basis: auto;
+      width: 100%;
+      margin-left: 0;
+   }
+   .main {
+      margin-top: 76px;
+   }
    .main-title {
       flex-basis: 100%;
       text-align: center;
    }
+   .main-title p {
+      line-height: 125%;
+      margin-bottom: 50px;
+   }
    .main-head img {
       display: none;
+   }
+   .footer {
+      margin-top: 68px;
+   }
+   .footer-logo {
+      width: 78px;
+      height: 24px;
+   }
+   .footer-copyright {
+      flex-basis: 60%;
+      font-size: 11px;
    }
 }
 
 @media (max-width: 340px) {
-   .line {
-      width: 230px;
-   }
    .fit-menu {
       margin-left: 0;
    }
@@ -912,22 +989,27 @@ a {
       font-size: 20px;
    }
    .hero-btn {
-      padding: 22px 40px;
+      flex-basis: auto;
+      width: 100%;
    }
    .menu {
       margin-top: 76px;
+   }
+   .menu-title {
+      flex-basis: auto;
    }
    .menu-header p {
       padding-top: 15px;
    }
    .grid {
-      grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(6, 114px);
-      grid-template-areas: "a" "b" "c" "d" "e" "f";
    }
-   .item {
-      padding: 0 12px;
-
+   .item img {
+      max-width: 38px;
+      height: 39px;
+   }
+   .item-title {
+      font-size: 14px;
    }
    .subscribe {
       margin-top: 76px;
@@ -940,20 +1022,6 @@ a {
       height: 31px;
       bottom: 56px;
       left: 20px;
-   }
-   .form {
-      flex-direction: column;
-   }
-   .form-btn {
-      flex-basis: 100%;
-      font-weight: 700;
-      font-size: 15px;
-      letter-spacing: 0.04em;
-      padding: 20px 20px;
-      margin-top: 30px;
-      margin-left: 0;
-      text-transform: uppercase;
-      border: none;
    }
    .main-title {
       flex-basis: 100%;
@@ -975,10 +1043,6 @@ a {
    }
    .footer {
       margin-top: 68px;
-   }
-   .footer-logo {
-      width: 78px;
-      height: 24px;
    }
    .footer-copyright {
       flex-basis: 50%;
