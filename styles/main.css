@@ -869,6 +869,9 @@ a {
 }
 
 @media (max-width: 540px) {
+   body {
+      overflow-x: hidden;
+   }
    .header {
       padding-top: 32px;
    }
