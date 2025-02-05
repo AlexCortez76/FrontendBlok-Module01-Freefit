@@ -91,9 +91,11 @@ a {
    font-weight: 700;
    line-height: 150%;
    position: relative;
+   transition: var(--tr);
 }
 
-.header-email-item {
+.email::before {
+   content: '';
    background-color: var(--yellow);
    width: 25px;
    height: 25px;
@@ -103,6 +105,13 @@ a {
    right: 125px;
    z-index: -1;
 }
+
+.email:hover {
+   background-image: linear-gradient(180deg, #b1b114 0%, rgba(124, 124, 86, 0.5) 80%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+ }
 
 .button-up {
    position: fixed;
@@ -290,7 +299,6 @@ a {
    opacity: 0.5;
    background-color: transparent;
    border-radius: 1px;
-   transition: var(--tr);
    position: absolute;
    top: 0;
    right: 0;
@@ -300,6 +308,7 @@ a {
    border: none;
    box-shadow: 0 13px 30px 0 rgba(186, 180, 69, 0.2);
    background: linear-gradient(180deg, #fbf138 0%, rgba(253, 249, 182, 0.45) 100%);
+   transition: var(--tr);
    opacity: 0.7;
    z-index: -1;
 }
@@ -414,6 +423,7 @@ a {
    margin-left: 50px;
    text-transform: uppercase;
    border: none;
+   transition: var(--tr);
 }
 
 .form-btn:hover {
@@ -538,13 +548,15 @@ a {
    letter-spacing: 0.03em;
    padding: 22px 52px;
    text-transform: uppercase;
-   text-align: center;  
+   text-align: center;
    border: none;
+   transition: var(--tr);
 }
 
 .main-btn:hover {
    color: var(--yellow);
    background-color: var(--dark);
+   transition: var(--tr);
 }
 
 .main-info {
@@ -623,10 +635,12 @@ a {
    font-weight: 700;
    font-size: 16px;
    line-height: 150%;
+   transition: var(--tr);
    z-index: 2;
 }
 
-.footer-email-item {
+.footer-email::before {
+   content: '';
    background-color: var(--yellow);
    width: 25px;
    height: 25px;
@@ -635,6 +649,13 @@ a {
    bottom: 5px;
    right: 125px;
    z-index: -1;
+}
+
+.footer-email:hover {
+   background-image: linear-gradient(180deg, #b1b114 0%, rgba(124, 124, 86, 0.5) 80%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
 }
 
 .footer-copyright {
